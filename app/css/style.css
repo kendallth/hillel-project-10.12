@@ -1,0 +1,213 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+.container {
+  max-width: 1380px;
+  min-width: 375px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.address,
+.header__fb,
+.header__menu-list {
+  display: none;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr -webkit-min-content;
+  grid-template-columns: 1fr min-content;
+  grid-template-rows: -webkit-min-content -webkit-min-content;
+  grid-template-rows: min-content min-content;
+}
+
+.header__top-line {
+  grid-column: span 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 13px 15px;
+}
+
+.header__lang {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+}
+
+.header__lang a {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #B3B3BA;
+  padding: 5px 7px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.header__lang a:hover {
+  background-color: #F5F5FA;
+}
+
+.header__lang a.current {
+  background-color: #F0145A;
+  color: #FFFFFF;
+}
+
+.header__logo-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.header__about {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #323264;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__about::before {
+  content: '';
+  background-image: url(../img/slash.svg);
+  background-size: cover;
+  width: 12px;
+  height: 16px;
+}
+
+.first-section__introduction {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, -webkit-min-content);
+  grid-template-rows: repeat(2, min-content);
+}
+
+.first-section__list-ccib {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+}
+
+.first-section__what-can-we-do {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: -webkit-min-content;
+  grid-template-rows: min-content;
+}
+
+@media (min-width: 768px) {
+  .header {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, -webkit-min-content);
+    grid-template-rows: repeat(3, min-content);
+  }
+  .header__top-line {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    grid-column: 1 / -1;
+  }
+  .header__logo img {
+    width: 130px;
+    height: 60px;
+  }
+  .address {
+    display: block;
+  }
+  .header__fb {
+    display: block;
+  }
+  .header__menu-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+  }
+  .header__menu-btn {
+    display: none;
+  }
+  .header__about {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .header__about::before {
+    width: 21px;
+    height: 47px;
+  }
+  .first-section__what-can-we-do {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, -webkit-min-content);
+    grid-template-rows: repeat(2, min-content);
+  }
+}
+
+@media (min-width: 992px) {
+  .header {
+    grid-template-columns: -webkit-min-content 1fr;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: repeat(2, -webkit-min-content);
+    grid-template-rows: repeat(2, min-content);
+  }
+  .header__logo-box {
+    grid-row: 1 / -1;
+    align-self: center;
+  }
+  .header__top-line {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .header__menu {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    justify-self: end;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
